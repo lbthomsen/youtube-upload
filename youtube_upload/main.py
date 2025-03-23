@@ -76,14 +76,14 @@ def get_progress_info():
     """Return a function callback to update the progressbar."""
     progressinfo = struct("ProgressInfo", ["callback", "finish"])
 
-    if progressbar:
-        bar = progressbar.ProgressBar(widgets=[
-            progressbar.Percentage(),
-            ' ', progressbar.Bar(),
-            ' ', progressbar.FileTransferSpeed(),
-            ' ', progressbar.DataSize(), '/', progressbar.DataSize('max_value'),
-            ' ', progressbar.Timer(),
-            ' ', progressbar.AdaptiveETA(),
+    if progressbar2:
+        bar = progressbar2.ProgressBar(widgets=[
+            progressbar2.Percentage(),
+            ' ', progressbar2.Bar(),
+            ' ', progressbar2.FileTransferSpeed(),
+            ' ', progressbar2.DataSize(), '/', progressbar2.DataSize('max_value'),
+            ' ', progressbar2.Timer(),
+            ' ', progressbar2.AdaptiveETA(),
         ])
 
         def _callback(total_size, completed):
